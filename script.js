@@ -10,6 +10,9 @@
   - if bg color is light text color needs to be black color
 */
 
-// var input = document.getElementById("hex").value;
+var input = document.getElementById("hex");
+var body = document.getElementsByTagName("body")[0];
 
-// console.log(input);
+input.addEventListener("input", function() {
+  body.style.background = "#" + input.value;
+});
