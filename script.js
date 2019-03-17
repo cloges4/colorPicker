@@ -40,7 +40,9 @@ function keyPress() {
   if (event.keyCode === 13 || event.keyCode === 32) {
     hexGenerator();
     body.style.background = "#" + hexValue;
-    console.log(hexValue); // remove before deployment
+    input.value = hexValue;
+    // input.value = body.style.background; // RGB value What?
+    console.log("cl", hexValue); // remove before deploy
   }
 }
 
