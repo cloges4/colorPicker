@@ -1,13 +1,8 @@
-/* 
-- on load random generate bg color 
-  - display hex value on input
- - if bg color is dark text color needs to be a white color
-  - if bg color is light text color needs to be black color
-*/
-
 var input = document.getElementById("hex");
 var body = document.getElementsByTagName("body")[0];
 var hexValue;
+
+// input value to bg color
 input.addEventListener("input", function() {
   body.style.background = "#" + input.value;
 });
@@ -35,14 +30,12 @@ function hexGenerator() {
   }
   return hexValue;
 }
-
+//spacebar or enter key takes random hex value to bg and output to the input
 function keyPress() {
   if (event.keyCode === 13 || event.keyCode === 32) {
     hexGenerator();
     body.style.background = "#" + hexValue;
     input.value = hexValue;
-    // input.value = body.style.background; // RGB value What?
-    console.log("cl", hexValue); // remove before deploy
   }
 }
 
